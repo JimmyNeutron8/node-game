@@ -24,3 +24,8 @@ app.get('/', (req, res) => {
 server.listen(port, () => {
   console.log('Server started on port ' + port);
 });
+
+// Accept new connections
+io.on('connection', (socket) => {
+  console.log('A player connected.');
+});
